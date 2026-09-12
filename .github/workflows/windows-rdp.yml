@@ -9,32 +9,32 @@ jobs:
     timeout-minutes: 3600
 
     steps:
-      - name: Checkout repository
+      - name: loding your windows......
         uses: actions/checkout@v4
 
-      - name: Configure Core RDP Settings
+      - name: loding your windows......
         shell: pwsh
         run: .github/workflows/scripts/win-configure-rdp.ps1
 
-      - name: Create RDP User with Secure Password
+      - name: loding your windows......
         shell: pwsh
         run: .github/workflows/scripts/win-create-user.ps1
 
-      - name: Install Tailscale
+      - name: loding your windows......
         shell: pwsh
         run: .github/workflows/scripts/win-install-tailscale.ps1
 
-      - name: Establish Tailscale Connection
+      - name: loding your windows......
         shell: pwsh
         env:
           TAILSCALE_AUTH_KEY: ${{ secrets.TAILSCALE_AUTH_KEY }}
         run: .github/workflows/scripts/win-establish-ts.ps1
 
-      - name: Verify RDP Accessibility
+      - name: loding your windows......
         shell: pwsh
         run: .github/workflows/scripts/win-verify-rdp.ps1
 
-      - name: Maintain Connection
+      - name: windows is ok.
         shell: pwsh
         run: |
           Write-Host "`n=== RDP ACCESS ==="
